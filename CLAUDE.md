@@ -9,6 +9,7 @@ Reglas comunes a todos mis repos (copia de mi `C:\dev\CLAUDE.md`, para que tambi
 - Si ves un error de concepto o algo que no entiendo bien, dímelo aunque no te lo pregunte.
 - Responde en español.
 - No hagas commit ni push sin que te lo pida. Commits sin `Co-Authored-By` ni líneas de atribución.
+- **Commits en GitHub:** uno por cambio, nunca mezclados, cada uno con su push. Mensaje en inglés profesional y técnico (conventional commits: `type(scope): summary`, en imperativo), con un cuerpo que explica qué cambia y por qué.
 - **Pull requests en todos los repos (asignaturas y personales):** nunca se commitea directo en `main`. Una rama por cambio (nombre con guiones, sin barra: con barra GitHub dio error 500), sus commits pequeños, `gh pr create --fill --base main`, tests en local y CI en verde (`gh pr checks <n> --watch`), y `gh pr merge <n> --merge --delete-branch` (nunca squash, para que cada commit quede en el historial). Si el repo no tiene tests o CI para lo que cambia, dilo y propón añadirlos. Si la carpeta la comparten otras sesiones, trabaja en un worktree propio y no cambies de rama allí. Sigue valiendo que el commit, push y merge solo se hacen cuando yo lo pida.
 - No subas binarios generados (`target/`, `*.class`, `__pycache__/`, `*.pyc`, `bin/`, `obj/`, `Library/` de Unity).
 - Nunca leas, muestres ni subas ficheros `.env`, tokens ni credenciales.
@@ -21,7 +22,7 @@ HTML5/CSS3 y el ecosistema XML.
 - `ecosistema-xml-xsd-xslt/` — un ejercicio por carpeta: `Ejercicio N DTD - XML/`, `Ejercicio N XSD - XML/`, `Ejercicio N XSLT/`, además de XQuery, casos prácticos y simulacros.
 
 ## Validar y probar
-- HTML: abrir en el navegador; validar con validator.w3.org si hace falta.
+- HTML: abrir en el navegador.
 - XML contra DTD/XSD: `xmllint --noout --dtdvalid f.dtd f.xml` / `xmllint --noout --schema f.xsd f.xml` (o el validador del IDE).
 - XSLT: `xsltproc hoja.xsl datos.xml` o enlazar la hoja en el XML con `<?xml-stylesheet?>`.
 
